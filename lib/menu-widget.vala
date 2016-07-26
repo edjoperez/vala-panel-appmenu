@@ -82,7 +82,7 @@ namespace Appmenu
 												if (tit == "pancho") {
 													context.add_class("title-menu");
 												}
-												if (ch is Glib.Menu) {
+												if (ch is GLib.Menu) {
 													stdout.printf("menu");
 												}
 
