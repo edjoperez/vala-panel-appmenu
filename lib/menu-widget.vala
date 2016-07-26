@@ -71,6 +71,13 @@ namespace Appmenu
 														stdout.printf("Sin titulo ");
 													}
 												}
+
+												string tit = ch.get_name();
+												if (tit != null) {
+													stdout.printf("Codigo: "+tit);
+												}else {
+													stdout.printf("No hay codigo ");
+												}
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
