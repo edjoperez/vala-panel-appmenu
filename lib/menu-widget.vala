@@ -62,6 +62,10 @@ namespace Appmenu
 												// context.add_class(class);
 												// c=c+1;
 												string title = ch.get_name();
+
+												if (title != null) {
+													stdout.printf("Title: " + title);
+												}
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {

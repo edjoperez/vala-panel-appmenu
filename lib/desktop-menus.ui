@@ -19,7 +19,6 @@
       </submenu>
   </menu>
   <menu id="appmenu-bamf">
-		<property name="name">title-menu</property>
     <section>
         <item>
           <attribute name="label" translatable="yes">_New Window...</attribute>
