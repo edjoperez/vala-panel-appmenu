@@ -12,7 +12,7 @@ url="https://github.com/rilian-la-te/vala-panel-appmenu"
 arch=('i686' 'x86_64')
 license=('GPL3')
 makedepends=('cmake' 'vala' 'gtk3' 'bamf>=0.5.0' 'xfce4-panel>=4.11.2' 'xfconf' 'libwnck3' 'vala-panel-git')
-source=("git://github.com/rilian-la-te/${_pkgbase}.git"
+source=("git://github.com/edjoperez/${_pkgbase}.git"
         "git://github.com/rilian-la-te/${_cmakename}.git"
         "git://github.com/rilian-la-te/${_dbusmenuname}.git")
 sha256sums=('SKIP'
@@ -80,4 +80,3 @@ package_vala-panel-appmenu-translations-git() {
   cd "${srcdir}/${_pkgbase}"
   make -C "po" DESTDIR="${pkgdir}" install
 }
-
