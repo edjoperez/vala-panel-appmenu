@@ -49,9 +49,6 @@ namespace Appmenu
             var desktop_file = app.get_desktop_file();
             var builder = new Builder.from_resource("/org/vala-panel/appmenu/desktop-menus.ui");
             unowned GLib.Menu menu = builder.get_object("appmenu-bamf") as GLib.Menu;
-						unowned Gtk.Widget wi = menu as Gtk.Widget;
-						unowned Gtk.StyleContext ct = wi.get_style_context();
-						ct.add_class("title-menu");
             if (desktop_file != null)
             {
                 unowned GLib.Menu section = builder.get_object("desktop-actions") as GLib.Menu;
