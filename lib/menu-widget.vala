@@ -62,9 +62,9 @@ namespace Appmenu
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
-												// 	context.add_class("-vala-panel-appmenu-private");
+													context.add_class("-vala-panel-appmenu-private");
 												// }
-												stdout.printf(c.to_string());
+												stdout.printf(gtk.Buildable.get_name(ch));
 												// stdout.printf(ch.get_name());
                     }
                 });
