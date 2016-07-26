@@ -1,8 +1,9 @@
 .-vala-panel-appmenu-private {
     /*background-color: transparent;*/
+		background-color: red;
     background-image: none;
     color: inherit;
 }
-#active-windows{
+/*#active-windows{
     background-color: blue;
-}
+}*/
