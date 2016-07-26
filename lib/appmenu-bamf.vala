@@ -74,6 +74,7 @@ namespace Appmenu
             app.window_added.connect(on_window_added);
             app.window_removed.connect(on_window_removed);
             window_section = builder.get_object("active-windows") as GLib.Menu;
+						window_section.set_name("active-windows");
             foreach(unowned Bamf.Window window in app.get_windows())
                 on_window_added(window);
             var gmenu = new GLib.Menu();
