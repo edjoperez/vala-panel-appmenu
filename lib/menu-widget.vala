@@ -64,7 +64,7 @@ namespace Appmenu
 												// }else {
 												// 	context.add_class("-vala-panel-appmenu-private");
 												// }
-												stdout.printf(c);
+												stdout.printf(c.to_string());
 												// stdout.printf(ch.get_name());
                     }
                 });
