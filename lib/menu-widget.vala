@@ -61,13 +61,15 @@ namespace Appmenu
 												// string class = "-vala-panel-appmenu-private" + c.to_string();
 												// context.add_class(class);
 												// c=c+1;
-												unowned Gtk.Menu men = ch as Gtk.Menu;
-												string title = men.get_title();
+												if (ch is Gtk.Menu) {
+													unowned Gtk.Menu men = ch as Gtk.Menu;
+													string title = men.get_title();
 
-												if (title != null) {
-													stdout.printf("Title: " + title);
-												}else {
-													stdout.printf("Sin titulo ");
+													if (title != null) {
+														stdout.printf("Title: " + title);
+													}else {
+														stdout.printf("Sin titulo ");
+													}
 												}
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
