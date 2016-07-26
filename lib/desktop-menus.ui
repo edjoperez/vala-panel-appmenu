@@ -41,6 +41,9 @@
     <section id="unity-actions">
     </section>
     <section id="active-windows">
+			<style>
+				<class name="red-section"/>
+			</style>
     </section>
   </menu>
 </interface>
