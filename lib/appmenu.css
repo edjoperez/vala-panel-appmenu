@@ -1,6 +1,6 @@
 .-vala-panel-appmenu-private {
     /*background-color: transparent;*/
-		background-color: red;
+		/*background-color: red;*/
     background-image: none;
     color: inherit;
 		border: solid 1px white;
@@ -8,3 +8,7 @@
 /*#active-windows{
     background-color: blue;
 }*/
+
+.-vala-panel-appmenu-private:hover {
+	background-color:red;
+}

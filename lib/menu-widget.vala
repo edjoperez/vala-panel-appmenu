@@ -58,7 +58,7 @@ namespace Appmenu
                         unowned Gtk.StyleContext context = ch.get_style_context();
                         context.add_provider(provider,Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
                         context.add_class("-vala-panel-appmenu-private");
-												stdout.printf(ch.get_name());
+												// stdout.printf(ch.get_name());
                     }
                 });
             } catch (GLib.Error e) {}
