@@ -1,12 +1,8 @@
 .-vala-panel-appmenu-private {
     /*background-color: transparent;*/
-		background-color: brown;
     background-image: none;
     color: inherit;
 }
-.-vala-panel-appmenu-private #desktop-actions{
+#active-windows{
     background-color: blue;
-}
-.-vala-panel-appmenu-private section{
-    background-color: red;
 }
