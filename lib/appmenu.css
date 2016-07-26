@@ -1,5 +1,6 @@
 .-vala-panel-appmenu-private {
-    background-color: transparent;
+    /*background-color: transparent;*/
+		background-color: brown;
     background-image: none;
     color: inherit;
 }
