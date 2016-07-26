@@ -60,7 +60,7 @@ namespace Appmenu
                         context.add_class("-vala-panel-appmenu-private");
                     }
 										foreach (Gtk.Widget ch in this.get_children() ) {
-											stdout.printf(gtk_widget_get_name(ch));
+											stdout.printf(ch.gtk_widget_get_name());
 										}
                 });
             } catch (GLib.Error e) {}
