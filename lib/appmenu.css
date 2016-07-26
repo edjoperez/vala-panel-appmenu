@@ -3,9 +3,9 @@
     background-image: none;
     color: inherit;
 }
-#desktop-actions{
+.-vala-panel-appmenu-private #desktop-actions{
     background-color: blue;
 }
-#-desktop-actions{
+.-vala-panel-appmenu-private section{
     background-color: red;
 }
