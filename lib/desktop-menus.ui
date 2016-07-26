@@ -19,6 +19,7 @@
       </submenu>
   </menu>
   <menu id="appmenu-bamf">
+
     <section>
         <item>
           <attribute name="label" translatable="yes">_New Window...</attribute>

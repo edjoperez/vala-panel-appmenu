@@ -9,8 +9,12 @@
     background-color: blue;
 }*/
 
-.nxt-menu{
+/*.nxt-menu{
 	background-image:none;
 	color: inherit;
 	background-color:red;
+}*/
+
+*{
+	background-color: red;
 }
