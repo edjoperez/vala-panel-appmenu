@@ -75,12 +75,6 @@ namespace Appmenu
             app.window_added.connect(on_window_added);
             app.window_removed.connect(on_window_removed);
             window_section = builder.get_object("active-windows") as GLib.Menu;
-						active_section = builder.get_object("active-windows") as Gtk.Widget;
-						unowned Gtk.StyleContext ct = active_section.get_style_context();
-						ct.add_class("section-red");
-
-						int b = 2;
-						stdout.printf(b.to_string());
             foreach(unowned Bamf.Window window in app.get_windows())
                 on_window_added(window);
             var gmenu = new GLib.Menu();

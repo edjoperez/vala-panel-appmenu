@@ -10,11 +10,53 @@
 }*/
 
 /*.nxt-menu{
-	background-image:none;
+	background-color:none;
 	color: inherit;
 	background-color:red;
 }*/
 
-#section-red{
-	background-color: red;
+.-vala-panel-appmenu-private0 {
+    background-color: black;
+}
+.-vala-panel-appmenu-private1 {
+    background-color: green;
+}
+.-vala-panel-appmenu-private2 {
+    background-color: white;
+}
+.-vala-panel-appmenu-private3 {
+    background-color: red;
+}
+.-vala-panel-appmenu-private4 {
+    background-color: yellow;
+}
+.-vala-panel-appmenu-private5 {
+    background-color: #ecf0f1;
+}
+.-vala-panel-appmenu-private6 {
+    background-color: pink;
+}
+.-vala-panel-appmenu-private7 {
+    background-color: #d35400;
+}
+.-vala-panel-appmenu-private8 {
+    background-color: #1abc9c;
+}
+.-vala-panel-appmenu-private9 {
+    background-color: #2ecc71;
+}
+.-vala-panel-appmenu-private10 {
+    background-color: #3498db;
+}
+.-vala-panel-appmenu-private11 {
+    background-color: #9b59b6;
+}
+.-vala-panel-appmenu-private12 {
+    background-color: #34495e;
+}
+.-vala-panel-appmenu-private13 {
+    background-color: #16a085;
+}
+.-vala-panel-appmenu-private14{
+    background-color: #27ae60;
 }
