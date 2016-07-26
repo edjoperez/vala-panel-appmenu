@@ -3,6 +3,9 @@
     background-image: none;
     color: inherit;
 }
-.-vala-panel-appmenu-private:hover{
-	background-color: red !important;
+#desktop-actions{
+    background-color: blue;
+}
+#-desktop-actions{
+    background-color: red;
 }
