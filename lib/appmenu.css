@@ -3,6 +3,7 @@
 		background-color: red;
     background-image: none;
     color: inherit;
+		border: solid 1px white;
 }
 /*#active-windows{
     background-color: blue;
