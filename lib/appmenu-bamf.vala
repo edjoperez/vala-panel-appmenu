@@ -29,7 +29,6 @@ namespace Appmenu
         private static const string UNITY_QUICKLISTS_TARGET_VALUE = "Unity";
         private unowned Bamf.Application app;
         private GLib.Menu window_section;
-				private Gtk.Widget active_section;
         private static const GLib.ActionEntry[] entries =
         {
             {"new-window", activate_new, null, null, null},
@@ -50,6 +49,11 @@ namespace Appmenu
             var desktop_file = app.get_desktop_file();
             var builder = new Builder.from_resource("/org/vala-panel/appmenu/desktop-menus.ui");
             unowned GLib.Menu menu = builder.get_object("appmenu-bamf") as GLib.Menu;
+						//
+						unowned GLib.Menu menu_styled = builder.get_object("appmenu-bamf") as Gtk.Widget;
+						unowned Gtk.StyleContext ct = menu_styled.get_style_context();
+						ct.add_class("section-red");
+						//
             if (desktop_file != null)
             {
                 unowned GLib.Menu section = builder.get_object("desktop-actions") as GLib.Menu;
@@ -75,6 +79,12 @@ namespace Appmenu
             app.window_added.connect(on_window_added);
             app.window_removed.connect(on_window_removed);
             window_section = builder.get_object("active-windows") as GLib.Menu;
+						// active_section = builder.get_object("active-windows") as Gtk.Widget;
+						// unowned Gtk.StyleContext ct = active_section.get_style_context();
+						// ct.add_class("section-red");
+						//
+						// int b = 2;
+						// stdout.printf(b.to_string());
             foreach(unowned Bamf.Window window in app.get_windows())
                 on_window_added(window);
             var gmenu = new GLib.Menu();
