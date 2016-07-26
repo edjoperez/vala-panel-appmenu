@@ -61,7 +61,7 @@ namespace Appmenu
 												// string class = "-vala-panel-appmenu-private" + c.to_string();
 												// context.add_class(class);
 												// c=c+1;
-												
+												string title = ch.get_name();
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
