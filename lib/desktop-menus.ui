@@ -19,7 +19,9 @@
       </submenu>
   </menu>
   <menu id="appmenu-bamf">
-
+		<style>
+			<class name="red-section"/>
+		</style>
     <section>
         <item>
           <attribute name="label" translatable="yes">_New Window...</attribute>
