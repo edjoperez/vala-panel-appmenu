@@ -37,10 +37,25 @@
         </item>
     </section>
     <section id="desktop-actions">
+			<item>
+				<attribute name="label" translatable="yes">Seccion1</attribute>
+				<attribute name="action">conf.close-all</attribute>
+				<attribute name="hidden-when">action-missing</attribute>
+			</item>
     </section>
     <section id="unity-actions">
+			<item>
+				<attribute name="label" translatable="yes">Seccion2</attribute>
+				<attribute name="action">conf.close-all</attribute>
+				<attribute name="hidden-when">action-missing</attribute>
+			</item>
     </section>
     <section id="active-windows">
+			<item>
+				<attribute name="label" translatable="yes">Seccion3</attribute>
+				<attribute name="action">conf.close-all</attribute>
+				<attribute name="hidden-when">action-missing</attribute>
+			</item>
     </section>
   </menu>
 </interface>
