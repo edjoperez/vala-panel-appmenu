@@ -14,7 +14,7 @@
 	color: inherit;
 	background-color:red;
 }*/
-.-vala-panel-appmenu-private0 {
+/*.-vala-panel-appmenu-private0 {
     background-color: black;
 }
 .-vala-panel-appmenu-private1 {
@@ -58,9 +58,16 @@
 }
 .-vala-panel-appmenu-private14{
     background-color: #27ae60;
-}
+}*/
 
 
 .title-menu{
 	background-color:blue;
+}
+
+#appmenu-bamf{
+	background-color:red;
+}
+.appmenu-bamf{
+	background-color: #27ae60;
 }
