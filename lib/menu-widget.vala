@@ -66,7 +66,7 @@ namespace Appmenu
 												// }
 												// stdout.printf(Gtk.Buildable.get_name(ch));
 												int a = 1;
-												stdout.printf(a.to_string());
+												stdout.printf(a.to_string()grandaf);
                     }
                 });
             } catch (GLib.Error e) {}
