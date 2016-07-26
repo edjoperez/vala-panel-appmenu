@@ -78,6 +78,9 @@ namespace Appmenu
 												}else {
 													stdout.printf("No hay codigo ");
 												}
+												if (tit == "pancho") {
+													context.add_class("title-menu");
+												}
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
