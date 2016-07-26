@@ -65,7 +65,8 @@ namespace Appmenu
 													context.add_class("-vala-panel-appmenu-private");
 												// }
 												// stdout.printf(Gtk.Buildable.get_name(ch));
-												stdout.printf(ch.get_name());
+												int a = 1;
+												stdout.printf(a.to_string());
                     }
                 });
             } catch (GLib.Error e) {}
