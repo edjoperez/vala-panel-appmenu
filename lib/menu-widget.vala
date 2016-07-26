@@ -61,13 +61,13 @@ namespace Appmenu
 												// string class = "-vala-panel-appmenu-private" + c.to_string();
 												// context.add_class(class);
 												// c=c+1;
-												string title = ch.get_name();
-
-												if (title != null) {
-													stdout.printf("Title: " + title);
-												}else {
-													stdout.printf("Sin titulo ");
-												}
+												// string title = ch.get_name();
+												//
+												// if (title != null) {
+												// 	stdout.printf("Title: " + title);
+												// }else {
+												// 	stdout.printf("Sin titulo ");
+												// }
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
