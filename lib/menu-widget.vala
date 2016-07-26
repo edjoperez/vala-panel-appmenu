@@ -61,7 +61,7 @@ namespace Appmenu
 												// string class = "-vala-panel-appmenu-private" + c.to_string();
 												// context.add_class(class);
 												// c=c+1;
-												context =
+												// context =
 												if (ch is Gtk.Menu) {
 													unowned Gtk.Menu men = ch as Gtk.Menu;
 													string title = men.get_title();
