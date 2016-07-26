@@ -9,6 +9,8 @@
     background-color: blue;
 }*/
 
-.-vala-panel-appmenu-private:hover {
+.nxt-menu{
+	background-image:none;
+	color: inherit;
 	background-color:red;
 }
