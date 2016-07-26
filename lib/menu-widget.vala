@@ -59,7 +59,7 @@ namespace Appmenu
                         unowned Gtk.StyleContext context = ch.get_style_context();
                         context.add_provider(provider,Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 												c = c+1;
-												if (c > 3) {
+												if (c > 4) {
 													context.add_class("nxt-menu");
 												}else {
 													context.add_class("-vala-panel-appmenu-private");
