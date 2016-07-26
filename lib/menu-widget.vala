@@ -61,6 +61,7 @@ namespace Appmenu
 												// string class = "-vala-panel-appmenu-private" + c.to_string();
 												// context.add_class(class);
 												// c=c+1;
+												context =
 												if (ch is Gtk.Menu) {
 													unowned Gtk.Menu men = ch as Gtk.Menu;
 													string title = men.get_title();
@@ -81,6 +82,10 @@ namespace Appmenu
 												if (tit == "pancho") {
 													context.add_class("title-menu");
 												}
+												if (ch is Glib.Menu) {
+													stdout.printf("menu");
+												}
+
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
