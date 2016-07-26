@@ -29,6 +29,7 @@ namespace Appmenu
         private static const string UNITY_QUICKLISTS_TARGET_VALUE = "Unity";
         private unowned Bamf.Application app;
         private GLib.Menu window_section;
+				private Gtk.Widget window_active;
         private static const GLib.ActionEntry[] entries =
         {
             {"new-window", activate_new, null, null, null},
