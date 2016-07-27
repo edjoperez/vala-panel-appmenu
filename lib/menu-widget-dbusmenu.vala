@@ -65,17 +65,5 @@ namespace Appmenu
 						this.client.attach_to_menu(menubar);
 					}
 				}
-
-				// public override bool enter_notify_event(Gdk.EventCrossing event){
-				// 	client.attach_to_menu(menubar);
-				// 	return false;
-				// }
-
-				public override bool leave_notify_event(Gdk.EventCrossing event){
-					this.client.detach();
-					print("widget out");
-					return false;
-				}
-
     }
 }
