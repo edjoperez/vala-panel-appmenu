@@ -48,6 +48,7 @@ namespace Appmenu
 								//MODS
 								// menubar.set_visible(false);
 								// appmenu.set_title_menu(menubar);
+								appmenu.set_client(client);
 								//END MODS
                 client.attach_to_menu(menubar);
                 this.add(menubar);
@@ -56,9 +57,5 @@ namespace Appmenu
             }
             this.show();
         }
-				public override bool motion_notify_event(Gdk.EventMotion event){
-					client.detach();
-					return false;
-				}
     }
 }

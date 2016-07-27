@@ -30,6 +30,7 @@ namespace Appmenu
         private unowned Bamf.Application app;
         private GLib.Menu window_section;
 				private Gtk.MenuBar title_menu;
+				private DBusMenu.GtkClient client;
 
         private static const GLib.ActionEntry[] entries =
         {
@@ -216,12 +217,14 @@ namespace Appmenu
 		public void set_title_menu(Gtk.MenuBar _title_menu){
 			this.title_menu = _title_menu;
 		}
-
+		public void set_client(DBusMenu.GtkClient _client){
+			this.client = _client;
+		}
 		public override bool motion_notify_event(Gdk.EventMotion event){
-			// if (this.title_menu != null) {
-			// 	this.title_menu.show();
-			// 	print("MUESTRA");
-			// }
+			if (this.client != null) {
+				this.client.detach();
+				print("MUESTRA");
+			}
 			return false;
 		}
     }
