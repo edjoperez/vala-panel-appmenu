@@ -230,6 +230,7 @@ namespace Appmenu
 		// }
 		public override bool leave_notify_event(Gdk.EventCrossing event){
 			this.widget.hide_widget();
+			print("hide");
 			return false;
 		}
     }
