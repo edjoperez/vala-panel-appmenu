@@ -40,13 +40,16 @@ namespace Appmenu
                 completed_menus |= MenuWidgetCompletionFlags.APPMENU;
             }
             if (DBusMenu.GtkClient.check(name,(string)path))
-            {
-                // client = new DBusMenu.GtkClient(name,(string)path);
-                // var menubar = new Gtk.MenuBar();
-                // client.attach_to_menu(menubar);
-                // this.add(menubar);
-                // menubar.show();
-                // completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
+            { //Loads the menubar for all apps
+                client = new DBusMenu.GtkClient(name,(string)path);
+                var menubar = new Gtk.MenuBar();
+								//MODS
+								// menubar.
+								//END MODS
+                client.attach_to_menu(menubar);
+                this.add(menubar);
+                menubar.show();
+                completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
             }
             this.show();
         }
