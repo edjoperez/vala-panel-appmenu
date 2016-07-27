@@ -30,8 +30,6 @@ namespace Appmenu
         private ulong close_handler;
         private ulong registered_handler;
         private ulong unregistered_handler;
-				private BamfAppmenu appmenu;
-				private bool has_appmenu;
         private unowned MenuWidget menu
         {
             get {return this.get_child() as MenuWidget;}
@@ -84,7 +82,6 @@ namespace Appmenu
         {
             unowned Bamf.Application app = matcher.get_application_for_xid(window_id);
             MenuWidget dbusmenu = new MenuWidgetDbusmenu(window_id,sender,menu_object_path,app);
-						print("Creado");
             return dbusmenu;
         }
         public void unregister_menu_window(uint window_id)
@@ -196,27 +193,31 @@ namespace Appmenu
 
 				public override bool leave_notify_event(Gdk.EventCrossing event){
 					//Se oculta el panel
-					if (this.has_appmenu) {
-						if (this.appmenu != null) {
-							this.appmenu.hide_title_menu();
-						}else {
-							print("no no tiene menu");
-						}
-					}else {
-						print("No se asigno menu");
+					// if (this.has_appmenu) {
+					// 	if (this.appmenu != null) {
+					// 		this.appmenu.hide_title_menu();
+					// 	}else {
+					// 		print("no no tiene menu");
+					// 	}
+					// }else {
+					// 	print("No se asigno menu");
+					// }
+					if (this.menu != null) {
+						this.get_menu().hide_widget();
 					}
 					return false;
  				}
 				public override bool enter_notify_event(Gdk.EventCrossing event){
-					if (this.has_appmenu) {
-						if (this.appmenu != null) {
-							this.appmenu.show_title_menu();
-						}else {
-							print("no no tiene menu para salir");
-						}
-					}else {
-						print("No se asigno menu para salir");
-					}
+					// if (this.has_appmenu) {
+					// 	if (this.appmenu != null) {
+					// 		this.appmenu.show_title_menu();
+					// 	}else {
+					// 		print("no no tiene menu para salir");
+					// 	}
+					// }else {
+					// 	print("No se asigno menu para salir");
+					// }
+					this.get_menu().show_widget();
 					return false;
 				}
     }
