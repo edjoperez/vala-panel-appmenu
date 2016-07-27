@@ -60,5 +60,8 @@ namespace Appmenu
 				public void hide_widget(){
 					client.detach();
 				}
+				public void show_widget(){
+					client.attach_to_menu(menubar);
+				}
     }
 }

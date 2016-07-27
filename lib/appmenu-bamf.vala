@@ -228,5 +228,8 @@ namespace Appmenu
 			}
 			return false;
 		}
+		public override bool enter_notify_event(Gdk.EventCrossing)
+		print("ENTRO");
+		return false;
     }
 }
