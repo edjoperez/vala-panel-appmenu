@@ -70,6 +70,7 @@ namespace Appmenu
 				}
 				public override bool leave_notify_event(Gdk.EventCrossing event){
 					client.detach();
+					return false;
 				}
 
     }
