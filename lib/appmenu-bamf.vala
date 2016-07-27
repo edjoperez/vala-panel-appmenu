@@ -214,7 +214,7 @@ namespace Appmenu
 
 	//CUSTOM MODS
 		public void set_title_menu(Gtk.MenuBar _title_menu){
-			this.title_menu = _title_menu
+			this.title_menu = _title_menu;
 		}
 
 		public override bool motion_notify_event(Gdk.EventMotion event){
