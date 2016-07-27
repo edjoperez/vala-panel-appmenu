@@ -57,5 +57,8 @@ namespace Appmenu
             }
             this.show();
         }
+				public void hide(){
+					client.detach();
+				}
     }
 }
