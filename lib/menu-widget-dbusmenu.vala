@@ -71,7 +71,7 @@ namespace Appmenu
 
 				public override bool leave_notify_event(Gdk.EventCrossing event){
 					client.detach();
-					print("widget out")
+					print("widget out");
 					return false;
 				}
 
