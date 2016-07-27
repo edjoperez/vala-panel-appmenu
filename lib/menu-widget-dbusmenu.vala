@@ -41,12 +41,12 @@ namespace Appmenu
             }
             if (DBusMenu.GtkClient.check(name,(string)path))
             {
-                client = new DBusMenu.GtkClient(name,(string)path);
-                var menubar = new Gtk.MenuBar();
-                client.attach_to_menu(menubar);
-                this.add(menubar);
-                menubar.show();
-                completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
+                // client = new DBusMenu.GtkClient(name,(string)path);
+                // var menubar = new Gtk.MenuBar();
+                // client.attach_to_menu(menubar);
+                // this.add(menubar);
+                // menubar.show();
+                // completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
             }
             this.show();
         }
