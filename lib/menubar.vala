@@ -201,7 +201,7 @@ namespace Appmenu
 					// 	print("No se asigno menu");
 					// }
 					if (this.menu != null) {
-						this.menu.hide_widget();
+						(this.menu as MenuWidgetDbusmenu).hide_widget();
 					}
 					return false;
  				}
@@ -216,7 +216,7 @@ namespace Appmenu
 					// 	print("No se asigno menu para salir");
 					// }
 					if (this.menu != null) {
-						this.menu.show_widget();
+						(this.menu as MenuWidgetDbusmenu).show_widget();
 					}
 					return false;
 				}
