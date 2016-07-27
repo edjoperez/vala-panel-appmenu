@@ -53,7 +53,7 @@ namespace Appmenu
             }
             this.show();
         }
-				public override bool motion_notify_event(Gdk.EventMotion event){
+				public override bool enter_notify_event(Gdk.EventMotion event){
 					// var window = new Window ();
 			    // window.title = "First GTK+ Program";
 			    // window.border_width = 10;
