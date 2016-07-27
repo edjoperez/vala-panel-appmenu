@@ -65,9 +65,12 @@ namespace Appmenu
 				}
 
 				public override bool enter_notify_event(Gdk.EventCrossing event){
-					client.attach_to_menu(menubar);
-					print("show");
+					client.detach();
 					return false;
 				}
+				public override bool leave_notify_event(Gdk.EventCrossing event){
+					return false;
+				}
+
     }
 }
