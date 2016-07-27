@@ -170,7 +170,7 @@ namespace Appmenu
                 */
                 if (menu != null && (menu.completed_menus & MenuWidgetCompletionFlags.APPMENU) == 0 && app != null)
                 {
-                    this.appmenu = new BamfAppmenu(app);
+                    var appmenu = new BamfAppmenu(app);
                     menu.add(appmenu);
                     menu.reorder_child(appmenu,0);
                     appmenu.show();
