@@ -219,11 +219,13 @@ namespace Appmenu
 		}
 
 		public void hide_title_menu(){
-			this.widget.hide_widget();
+			// this.widget.hide_widget();
+			this.widget.hide();
 		}
 
 		public void show_title_menu(){
 			this.widget.show_widget();
+			this.widget.show();
 		}
 		// public override bool motion_notify_event(Gdk.EventMotion event){
 		// 	if (this.widget != null) {
