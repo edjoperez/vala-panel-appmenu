@@ -5,6 +5,20 @@
     color: inherit;
 		border: solid 1px white;
 }
+.-vala-panel-appmenu-private:first-child {
+    /*background-color: transparent;*/
+		background-color: blue;
+    background-image: none;
+    color: inherit;
+		border: solid 1px white;
+}
+.-vala-panel-appmenu-private:last-child {
+    /*background-color: transparent;*/
+		background-color: red;
+    background-image: none;
+    color: inherit;
+		border: solid 1px white;
+}
 /*#active-windows{
     background-color: blue;
 }*/

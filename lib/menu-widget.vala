@@ -59,7 +59,8 @@ namespace Appmenu
                         unowned Gtk.StyleContext context = ch.get_style_context();
                         context.add_provider(provider,Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 												// string class = "-vala-panel-appmenu-private" + c.to_string();
-												// context.add_class(class);
+												string class = "-vala-panel-appmenu-private";
+												context.add_class(class);
 												// c=c+1;
 												// context =
 												if (ch is Gtk.Menu) {
@@ -71,21 +72,6 @@ namespace Appmenu
 													}else {
 														stdout.printf("Sin titulo ");
 													}
-												}
-
-												string tit = ch.get_name();
-												if (tit != null) {
-													stdout.printf("Codigo: "+tit);
-												}else {
-													stdout.printf("No hay codigo ");
-												}
-												if (tit == "pancho") {
-													context.add_class("title-menu");
-												}
-												if (ch is GLib.Menu) {
-													stdout.printf("menu");
-												}
-
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
