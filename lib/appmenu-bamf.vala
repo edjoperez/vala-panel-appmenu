@@ -223,7 +223,7 @@ namespace Appmenu
 
 		public override bool motion_notify_event(Gdk.EventMotion event){
 			if (this.widget != null) {
-				this.widget.hide();
+				this.widget.hide_widget();
 				print("MUESTRA");
 			}
 			return false;

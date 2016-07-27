@@ -22,7 +22,7 @@ using DBusMenu;
 
 namespace Appmenu
 {
-    internal class MenuWidgetDbusmenu: MenuWidget
+    public class MenuWidgetDbusmenu: MenuWidget
     {
         public string object_name {get; private set construct;}
         public ObjectPath object_path {get; private set construct;}
@@ -57,7 +57,7 @@ namespace Appmenu
             }
             this.show();
         }
-				public void hide(){
+				public void hide_widget(){
 					client.detach();
 				}
     }
