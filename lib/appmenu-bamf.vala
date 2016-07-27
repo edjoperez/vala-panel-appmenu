@@ -221,16 +221,20 @@ namespace Appmenu
 			this.widget = _widget;
 		}
 
-		public override bool motion_notify_event(Gdk.EventMotion event){
-			if (this.widget != null) {
-				this.widget.hide_widget();
-				print("MUESTRA");
-			}
+		// public override bool motion_notify_event(Gdk.EventMotion event){
+		// 	if (this.widget != null) {
+		// 		this.widget.hide_widget();
+		// 		print("MUESTRA");
+		// 	}
+		// 	return false;
+		// }
+		public override bool enter_notify_event(Gdk.EventCrossing event){
+			this.widget.show_widget();
 			return false;
 		}
-		public override bool enter_notify_event(Gdk.EventCrossing event){
-		print("ENTRO");
-		return false;
-	}
+		public override bool leave_notify_event(Gdk.EventCrossing event){
+			this.widget.hide_widget();
+			return false;
+		}
     }
 }
