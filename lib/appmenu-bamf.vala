@@ -18,6 +18,8 @@
 
 using GLib;
 using Gtk;
+using DBusMenu;
+
 
 namespace Appmenu
 {

@@ -48,7 +48,7 @@ namespace Appmenu
 								//MODS
 								// menubar.set_visible(false);
 								// appmenu.set_title_menu(menubar);
-								appmenu.set_client(client);
+								appmenu.set_widget(this);
 								//END MODS
                 client.attach_to_menu(menubar);
                 this.add(menubar);
@@ -57,5 +57,8 @@ namespace Appmenu
             }
             this.show();
         }
+				public void shake(){
+					print("holis");
+				}
     }
 }
