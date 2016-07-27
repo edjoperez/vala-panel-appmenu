@@ -188,5 +188,10 @@ namespace Appmenu
                 menu = show_dummy_menu();
             return menu;
         }
+
+				public override bool motion_notify_event(Gdk.EventMotion event){
+				print("mueve ");
+				return false;
+			}
     }
 }

@@ -61,7 +61,9 @@ namespace Appmenu
 					client.detach();
 				}
 				public void show_widget(){
-					client.attach_to_menu(menubar);
+					if (menubar != null) {
+						client.attach_to_menu(menubar);
+					}
 				}
 
 				// public override bool enter_notify_event(Gdk.EventCrossing event){
