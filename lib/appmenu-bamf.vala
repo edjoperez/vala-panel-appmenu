@@ -49,7 +49,7 @@ namespace Appmenu
             var desktop_file = app.get_desktop_file();
             var builder = new Builder.from_resource("/org/vala-panel/appmenu/desktop-menus.ui");
             unowned GLib.Menu menu = builder.get_object("appmenu-bamf") as GLib.Menu;
-						unowned Gtk.Menu men = menu as Gtk.Menu;
+						unowned Gtk.Menu men = builder.get_object("appmenu-bamf");
 						men.set_title("pancho");
             if (desktop_file != null)
             {
