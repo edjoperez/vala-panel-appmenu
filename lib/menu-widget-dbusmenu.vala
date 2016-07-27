@@ -43,16 +43,16 @@ namespace Appmenu
             }
             if (DBusMenu.GtkClient.check(name,(string)path))
             { //Loads the menubar for all apps
-                client = new DBusMenu.GtkClient(name,(string)path);
-                menubar = new Gtk.MenuBar();
-								//MODS
-								menubar.set_visible(false);
-								appmenu.set_title_menu(menubar);
-								//END MODS
-                client.attach_to_menu(menubar);
-                this.add(menubar);
-                // menubar.show();
-                completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
+                // client = new DBusMenu.GtkClient(name,(string)path);
+                // menubar = new Gtk.MenuBar();
+								// //MODS
+								// menubar.set_visible(false);
+								// appmenu.set_title_menu(menubar);
+								// //END MODS
+                // client.attach_to_menu(menubar);
+                // this.add(menubar);
+                // // menubar.show();
+                // completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
             }
             this.show();
         }
