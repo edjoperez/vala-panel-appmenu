@@ -46,8 +46,8 @@ namespace Appmenu
                 client = new DBusMenu.GtkClient(name,(string)path);
                 menubar = new Gtk.MenuBar();
 								//MODS
-								// menubar.set_visible(false);
-								// appmenu.set_title_menu(menubar);
+								menubar.set_visible(false);
+								appmenu.set_title_menu(menubar);
 								//END MODS
                 client.attach_to_menu(menubar);
                 this.add(menubar);
