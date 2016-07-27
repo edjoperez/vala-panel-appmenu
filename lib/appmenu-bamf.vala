@@ -219,7 +219,8 @@ namespace Appmenu
 
 		public override bool motion_notify_event(Gdk.EventMotion event){
 			if (this.title_menu != null) {
-				this.title_menu.set_visible(true);
+				this.title_menu.show();
+				print("MUESTRA");
 			}
 			return false;
 		}
