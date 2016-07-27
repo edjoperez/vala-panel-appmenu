@@ -189,8 +189,8 @@ namespace Appmenu
             return menu;
         }
 
-				public override bool motion_notify_event(Gdk.EventMotion event){
-				print("mueve ");
+				public override bool leave_notify_event(Gdk.EventCrossing event){
+				print("se-fue ");
 				return false;
 			}
     }
