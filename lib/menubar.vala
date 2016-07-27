@@ -30,6 +30,7 @@ namespace Appmenu
         private ulong close_handler;
         private ulong registered_handler;
         private ulong unregistered_handler;
+				private BamfAppmenu appmenu;
         private unowned MenuWidget menu
         {
             get {return this.get_child() as MenuWidget;}
@@ -170,7 +171,7 @@ namespace Appmenu
                 */
                 if (menu != null && (menu.completed_menus & MenuWidgetCompletionFlags.APPMENU) == 0 && app != null)
                 {
-                    var appmenu = new BamfAppmenu(app);
+                    appmenu = new BamfAppmenu(app);
                     menu.add(appmenu);
                     menu.reorder_child(appmenu,0);
                     appmenu.show();
@@ -190,8 +191,14 @@ namespace Appmenu
         }
 
 				public override bool leave_notify_event(Gdk.EventCrossing event){
-				print("se-fue ");
-				return false;
+					//Se oculta el panel
+					appmenu.hide_title_menu();
+					return false;
+ 				}
+				public override bool enter_notify_event(Gdk.EventCrossing event){
+					appmenu.show_title_menu();
+					return false;
+
 			}
     }
 }

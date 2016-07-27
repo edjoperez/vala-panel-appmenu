@@ -221,6 +221,13 @@ namespace Appmenu
 			this.widget = _widget;
 		}
 
+		public void hide_title_menu(){
+			this.widget.hide_widget();
+		}
+
+		public void show_title_menu(){
+			this.widget.show_widget();
+		}
 		// public override bool motion_notify_event(Gdk.EventMotion event){
 		// 	if (this.widget != null) {
 		// 		this.widget.hide_widget();
@@ -228,10 +235,10 @@ namespace Appmenu
 		// 	}
 		// 	return false;
 		// }
-		public override bool enter_notify_event(Gdk.EventCrossing event){
-			this.widget.show_widget();
-			return false;
-		}
+		// public override bool enter_notify_event(Gdk.EventCrossing event){
+		// 	this.widget.show_widget();
+		// 	return false;
+		// }
 		// public override bool leave_notify_event(Gdk.EventCrossing event){
 		// 	this.widget.hide_widget();
 		// 	return false;
