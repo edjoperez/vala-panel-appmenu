@@ -43,7 +43,7 @@ namespace Appmenu
             }
             if (DBusMenu.GtkClient.check(name,(string)path))
             { //Loads the menubar for all apps
-                client = new DBusMenu.GtkClient(name,(string)path);
+                this.client = new DBusMenu.GtkClient(name,(string)path);
                 menubar = new Gtk.MenuBar();
 								//MODS
 								// menubar.set_visible(false);
@@ -58,11 +58,11 @@ namespace Appmenu
             this.show();
         }
 				public void hide_widget(){
-					client.detach();
+					this.client.detach();
 				}
 				public void show_widget(){
 					if (menubar != null) {
-						client.attach_to_menu(menubar);
+						this.client.attach_to_menu(menubar);
 					}
 				}
 
@@ -72,7 +72,7 @@ namespace Appmenu
 				// }
 
 				public override bool leave_notify_event(Gdk.EventCrossing event){
-					client.detach();
+					this.client.detach();
 					print("widget out");
 					return false;
 				}

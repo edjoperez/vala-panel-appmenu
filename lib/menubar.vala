@@ -31,6 +31,7 @@ namespace Appmenu
         private ulong registered_handler;
         private ulong unregistered_handler;
 				private BamfAppmenu appmenu;
+				private bool has_appmenu;
         private unowned MenuWidget menu
         {
             get {return this.get_child() as MenuWidget;}
@@ -61,6 +62,7 @@ namespace Appmenu
             foreach (unowned Bamf.Application app in matcher.get_running_applications())
                 on_window_opened(app);
             on_active_window_changed(matcher.get_active_window(),null);
+						has_appmenu = false;
         }
         protected override void destroy()
         {
@@ -173,6 +175,7 @@ namespace Appmenu
                 {
                     this.appmenu = new BamfAppmenu(app);
                     menu.add(appmenu);
+										this.has_appmenu = true;
                     menu.reorder_child(appmenu,0);
                     appmenu.show();
                     menu.completed_menus |= MenuWidgetCompletionFlags.APPMENU;
@@ -192,11 +195,27 @@ namespace Appmenu
 
 				public override bool leave_notify_event(Gdk.EventCrossing event){
 					//Se oculta el panel
-					appmenu.hide_title_menu();
+					if (this.has_appmenu) {
+						if (this.appmenu != null) {
+							this.appmenu.hide_title_menu();
+						}else {
+							print("no no tiene menu");
+						}
+					}else {
+						print("No se asigno menu");
+					}
 					return false;
  				}
 				public override bool enter_notify_event(Gdk.EventCrossing event){
-					appmenu.show_title_menu();
+					if (this.has_appmenu) {
+						if (this.appmenu != null) {
+							this.appmenu.show_title_menu();
+						}else {
+							print("no no tiene menu para salir");
+						}
+					}else {
+						print("No se asigno menu para salir");
+					}
 					return false;
 				}
     }
