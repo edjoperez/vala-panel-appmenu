@@ -3,7 +3,7 @@
 		/*background-color: red;*/
     background-image: none;
     color: inherit;
-		border: solid 1px white;
+		/*border: solid 1px white;*/
 }
 .-vala-panel-appmenu-private:first-child {
     /*background-color: transparent;*/
@@ -18,6 +18,7 @@
 		background-color: red;
     background-image: none;
     color: inherit;
+		display: none;
 }
 
 
