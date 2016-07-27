@@ -84,6 +84,7 @@ namespace Appmenu
         {
             unowned Bamf.Application app = matcher.get_application_for_xid(window_id);
             MenuWidget dbusmenu = new MenuWidgetDbusmenu(window_id,sender,menu_object_path,app);
+						print("Creado");
             return dbusmenu;
         }
         public void unregister_menu_window(uint window_id)
@@ -173,12 +174,12 @@ namespace Appmenu
                 */
                 if (menu != null && (menu.completed_menus & MenuWidgetCompletionFlags.APPMENU) == 0 && app != null)
                 {
-                    // this.appmenu = new BamfAppmenu(app);
-                    // menu.add(appmenu);
-										// this.has_appmenu = true;
-                    // menu.reorder_child(appmenu,0);
-                    // appmenu.show();
-                    // menu.completed_menus |= MenuWidgetCompletionFlags.APPMENU;
+                    this.appmenu = new BamfAppmenu(app);
+                    menu.add(appmenu);
+										this.has_appmenu = true;
+                    menu.reorder_child(appmenu,0);
+                    appmenu.show();
+                    menu.completed_menus |= MenuWidgetCompletionFlags.APPMENU;
                 }
                 if (menu == null)
                 {
