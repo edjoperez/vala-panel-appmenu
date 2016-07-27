@@ -60,7 +60,6 @@ namespace Appmenu
             foreach (unowned Bamf.Application app in matcher.get_running_applications())
                 on_window_opened(app);
             on_active_window_changed(matcher.get_active_window(),null);
-						has_appmenu = false;
         }
         protected override void destroy()
         {
@@ -173,7 +172,6 @@ namespace Appmenu
                 {
                     this.appmenu = new BamfAppmenu(app);
                     menu.add(appmenu);
-										this.has_appmenu = true;
                     menu.reorder_child(appmenu,0);
                     appmenu.show();
                     menu.completed_menus |= MenuWidgetCompletionFlags.APPMENU;
@@ -218,7 +216,7 @@ namespace Appmenu
 					// 	print("No se asigno menu para salir");
 					// }
 					if (this.menu != null) {
-						this.get_menu().show_widget();						
+						this.get_menu().show_widget();
 					}
 					return false;
 				}
