@@ -55,7 +55,7 @@ namespace Appmenu
             this.show();
         }
 				public override bool motion_notify_event(Gdk.EventMotion event){
-					(menubar as Gtk.Widget).set_visible(false);
+					menubar.set_visible(false);
 					// var window = new Window ();
 			    // window.title = "First GTK+ Program";
 			    // window.border_width = 10;
