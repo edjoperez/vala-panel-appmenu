@@ -217,7 +217,9 @@ namespace Appmenu
 					// }else {
 					// 	print("No se asigno menu para salir");
 					// }
-					this.get_menu().show_widget();
+					if (this.menu != null) {
+						this.get_menu().show_widget();						
+					}
 					return false;
 				}
     }
