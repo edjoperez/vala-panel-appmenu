@@ -28,6 +28,7 @@ namespace Appmenu
         public ObjectPath object_path {get; private set construct;}
         private DBusMenu.GtkClient client;
 				private Gtk.MenuBar menubar;
+				private BamfAppmenu appmenu;
         public MenuWidgetDbusmenu(uint window_id, string name, ObjectPath path, Bamf.Application? app)
         {
             this.window_id = window_id;
@@ -35,7 +36,7 @@ namespace Appmenu
             this.object_path = path;
             if (app != null)
             {
-                var appmenu = new BamfAppmenu(app);
+                appmenu = new BamfAppmenu(app);
                 this.add(appmenu);
                 appmenu.show();
                 completed_menus |= MenuWidgetCompletionFlags.APPMENU;
@@ -45,7 +46,8 @@ namespace Appmenu
                 client = new DBusMenu.GtkClient(name,(string)path);
                 menubar = new Gtk.MenuBar();
 								//MODS
-
+								menubar.set_visible(false);
+								appmenu.set_title_menu(menubar);
 								//END MODS
                 client.attach_to_menu(menubar);
                 this.add(menubar);
@@ -54,24 +56,5 @@ namespace Appmenu
             }
             this.show();
         }
-				public override bool motion_notify_event(Gdk.EventMotion event){
-					// menubar.set_visible(false);
-					// var window = new Window ();
-			    // window.title = "First GTK+ Program";
-			    // window.border_width = 10;
-			    // window.window_position = WindowPosition.CENTER;
-			    // window.set_default_size (350, 70);
-			    // window.destroy.connect (Gtk.main_quit);
-					//
-			    // var button = new Button.with_label ("Click me!");
-			    // button.clicked.connect (() => {
-			    //     button.label = "Thank you";
-			    // });
-
-			    // window.add (button);
-			    // window.show_all ();
-					print("menu");
-					return false;
-				}
     }
 }

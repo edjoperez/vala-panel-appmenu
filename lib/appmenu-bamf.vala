@@ -29,6 +29,8 @@ namespace Appmenu
         private static const string UNITY_QUICKLISTS_TARGET_VALUE = "Unity";
         private unowned Bamf.Application app;
         private GLib.Menu window_section;
+				private Gtk.Menubar title_menu;
+
         private static const GLib.ActionEntry[] entries =
         {
             {"new-window", activate_new, null, null, null},
@@ -211,22 +213,14 @@ namespace Appmenu
 #endif
 
 	//CUSTOM MODS
-		public override bool motion_notify_event(Gdk.EventMotion event){
-			// var window = new Window ();
-			// window.title = "First GTK+ Program";
-			// window.border_width = 10;
-			// window.window_position = WindowPosition.CENTER;
-			// window.set_default_size (350, 70);
-			// window.destroy.connect (Gtk.main_quit);
-			//
-			// var button = new Button.with_label ("Click me!");
-			// button.clicked.connect (() => {
-			//     button.label = "Thank you";
-			// });
+		public void set_title_menu(Gtk.MenuBar _title_menu){
+			this.title_menu = _title_menu
+		}
 
-			// window.add (button);
-			// window.show_all ();
-			print("menu2");
+		public override bool motion_notify_event(Gdk.EventMotion event){
+			if (this.title_menu != null) {
+				this.title_menu.set_visible(true);
+			}
 			return false;
 		}
     }
