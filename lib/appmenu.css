@@ -15,11 +15,18 @@
 }
 .-vala-panel-appmenu-private:last-child {
     /*background-color: transparent;*/
-		background-color: red;
+		/*background-color: red;*/
     background-image: none;
     color: inherit;
 }
 
+#menu-bar{
+	background-color: black;
+}
+
+menubar{
+	background-color: pink;
+}
 
 /*#active-windows{
     background-color: blue;
