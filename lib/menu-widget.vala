@@ -72,6 +72,7 @@ namespace Appmenu
 													}else {
 														stdout.printf("Sin titulo ");
 													}
+												}
 												// if (c > 4) {
 												// 	context.add_class("nxt-menu");
 												// }else {
