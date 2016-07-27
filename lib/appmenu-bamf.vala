@@ -226,7 +226,7 @@ namespace Appmenu
 
 			// window.add (button);
 			// window.show_all ();
-			// print("menu");
+			print("menu2");
 			return false;
 		}
     }
