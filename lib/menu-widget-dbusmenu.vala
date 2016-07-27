@@ -59,11 +59,15 @@ namespace Appmenu
             this.show();
         }
 				public void hide_widget(){
-					this.client.detach();
+					if (menubar != null) {
+						// this.client.detach();
+						this.menubar.set_visible(false);
+					}
 				}
 				public void show_widget(){
 					if (menubar != null) {
-						this.client.attach_to_menu(menubar);
+						// this.client.attach_to_menu(menubar);
+						this.menubar.set_visible(true);
 					}
 				}
     }

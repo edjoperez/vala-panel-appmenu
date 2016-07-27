@@ -189,17 +189,17 @@ namespace Appmenu
             return menu;
         }
 
-				// public override bool leave_notify_event(Gdk.EventCrossing event){
-				// 	if (this.menu != null) {
-				// 		(this.menu as MenuWidgetDbusmenu).hide_widget();
-				// 	}
-				// 	return false;
- 			// 	}
-				// public override bool enter_notify_event(Gdk.EventCrossing event){
-				// 	if (this.menu != null) {
-				// 		(this.menu as MenuWidgetDbusmenu).show_widget();
-				// 	}
-				// 	return false;
-				// }
+				public override bool leave_notify_event(Gdk.EventCrossing event){
+					if (this.menu != null) {
+						(this.menu as MenuWidgetDbusmenu).hide_widget();
+					}
+					return false;
+ 				}
+				public override bool enter_notify_event(Gdk.EventCrossing event){
+					if (this.menu != null) {
+						(this.menu as MenuWidgetDbusmenu).show_widget();
+					}
+					return false;
+				}
     }
 }
