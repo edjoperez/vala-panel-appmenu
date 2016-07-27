@@ -53,21 +53,23 @@ namespace Appmenu
                 client.attach_to_menu(menubar);
 								// menubar.set_visible(false);
                 this.add(menubar);
-                // menubar.show();
+                menubar.show();
                 completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
             }
             this.show();
         }
 				public void hide_widget(){
 					if (menubar != null) {
-						// this.client.detach();
-						this.menubar.set_visible(false);
+						this.menubar.hide();
+						this.client.detach();
+						// this.menubar.set_visible(false);
 					}
 				}
 				public void show_widget(){
 					if (menubar != null) {
-						// this.client.attach_to_menu(menubar);
-						this.menubar.set_visible(true);
+						this.client.attach_to_menu(menubar);
+						this.menubar.show();
+						// this.menubar.set_visible(true);
 					}
 				}
     }
