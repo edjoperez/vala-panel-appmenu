@@ -228,9 +228,14 @@ namespace Appmenu
 		// 	}
 		// 	return false;
 		// }
-		public override bool leave_notify_event(Gdk.EventCrossing event){
-			this.widget.hide_widget();
+		public override bool enter_notify_event(Gdk.EventCrossing event){
+			this.widget.show_widget();
+			print("bamf in")
 			return false;
 		}
+		// public override bool leave_notify_event(Gdk.EventCrossing event){
+		// 	this.widget.hide_widget();
+		// 	return false;
+		// }
     }
 }
