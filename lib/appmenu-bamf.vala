@@ -214,9 +214,6 @@ namespace Appmenu
 #endif
 
 	//CUSTOM MODS
-		public void set_title_menu(Gtk.MenuBar _title_menu){
-			this.title_menu = _title_menu;
-		}
 		public void set_widget(MenuWidgetDbusmenu _widget){
 			this.widget = _widget;
 		}

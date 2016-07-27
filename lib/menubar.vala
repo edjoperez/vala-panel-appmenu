@@ -190,31 +190,12 @@ namespace Appmenu
         }
 
 				public override bool leave_notify_event(Gdk.EventCrossing event){
-					//Se oculta el panel
-					// if (this.has_appmenu) {
-					// 	if (this.appmenu != null) {
-					// 		this.appmenu.hide_title_menu();
-					// 	}else {
-					// 		print("no no tiene menu");
-					// 	}
-					// }else {
-					// 	print("No se asigno menu");
-					// }
 					if (this.menu != null) {
 						(this.menu as MenuWidgetDbusmenu).hide_widget();
 					}
 					return false;
  				}
 				public override bool enter_notify_event(Gdk.EventCrossing event){
-					// if (this.has_appmenu) {
-					// 	if (this.appmenu != null) {
-					// 		this.appmenu.show_title_menu();
-					// 	}else {
-					// 		print("no no tiene menu para salir");
-					// 	}
-					// }else {
-					// 	print("No se asigno menu para salir");
-					// }
 					if (this.menu != null) {
 						(this.menu as MenuWidgetDbusmenu).show_widget();
 					}

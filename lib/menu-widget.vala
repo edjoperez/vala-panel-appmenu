@@ -73,13 +73,6 @@ namespace Appmenu
 														stdout.printf("Sin titulo ");
 													}
 												}
-												// if (c > 4) {
-												// 	context.add_class("nxt-menu");
-												// }else {
-												// }
-												// stdout.printf(Gtk.Buildable.get_name(ch));
-												// int a = 1;
-												// stdout.printf(a.to_string()grandaf);
                     }
                 });
             } catch (GLib.Error e) {}
