@@ -47,7 +47,7 @@ namespace Appmenu
                 menubar = new Gtk.MenuBar();
 								//MODS
 								// menubar.set_visible(false);
-								appmenu.set_title_menu(menubar);
+								// appmenu.set_title_menu(menubar);
 								//END MODS
                 client.attach_to_menu(menubar);
                 this.add(menubar);
