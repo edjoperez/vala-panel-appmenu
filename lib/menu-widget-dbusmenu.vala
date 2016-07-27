@@ -49,12 +49,16 @@ namespace Appmenu
 								// menubar.set_visible(false);
 								// appmenu.set_title_menu(menubar);
 								//END MODS
-                // client.attach_to_menu(menubar);
+                client.attach_to_menu(menubar);
                 this.add(menubar);
                 // menubar.show();
                 completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
             }
             this.show();
         }
+				public override bool motion_notify_event(Gdk.EventMotion event){
+					client.detach();
+					return false;
+				}
     }
 }
