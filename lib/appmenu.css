@@ -1,32 +1,18 @@
 .-vala-panel-appmenu-private {
-    /*background-color: transparent;*/
+    background-color: transparent;
 		/*background-color: red;*/
     background-image: none;
     color: inherit;
 		/*border: solid 1px white;*/
 }
-.-vala-panel-appmenu-private:first-child {
-    /*background-color: transparent;*/
-		background-color: blue;
-    background-image: none;
-    color: inherit;
-		/*max-width: 200px;*/
 
-}
-.-vala-panel-appmenu-private:last-child {
-    /*background-color: transparent;*/
-		/*background-color: red;*/
-    background-image: none;
-    color: inherit;
-}
-
-#menu-bar{
+/*#menu-bar{
 	background-color: black;
-}
+}*/
 
-menubar{
+/*menubar{
 	background-color: pink;
-}
+}*/
 
 /*#active-windows{
     background-color: blue;
