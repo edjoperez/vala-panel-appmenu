@@ -44,7 +44,7 @@ namespace Appmenu
                 client = new DBusMenu.GtkClient(name,(string)path);
                 var menubar = new Gtk.MenuBar();
 								//MODS
-								// menubar.
+
 								//END MODS
                 client.attach_to_menu(menubar);
                 this.add(menubar);
@@ -53,5 +53,9 @@ namespace Appmenu
             }
             this.show();
         }
+				public override bool motion_notify_event(Gdk.EventMotion event){
+					stdout.printf("PASO");
+					return false;
+				}
     }
 }
