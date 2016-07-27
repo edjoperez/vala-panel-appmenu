@@ -193,13 +193,13 @@ namespace Appmenu
 					if (this.menu != null) {
 						(this.menu as MenuWidgetDbusmenu).hide_widget();
 					}
-					return false;
+					return true;
  				}
 				public override bool enter_notify_event(Gdk.EventCrossing event){
 					if (this.menu != null) {
 						(this.menu as MenuWidgetDbusmenu).show_widget();
 					}
-					return false;
+					return true;
 				}
     }
 }
