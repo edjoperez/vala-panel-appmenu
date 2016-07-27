@@ -50,7 +50,7 @@ namespace Appmenu
 								// appmenu.set_title_menu(menubar);
 								appmenu.set_widget(this);
 								//END MODS
-                // client.attach_to_menu(menubar);
+                client.attach_to_menu(menubar);
                 this.add(menubar);
                 // menubar.show();
                 completed_menus |= MenuWidgetCompletionFlags.MENUBAR;
