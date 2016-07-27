@@ -29,7 +29,7 @@ namespace Appmenu
         private static const string UNITY_QUICKLISTS_TARGET_VALUE = "Unity";
         private unowned Bamf.Application app;
         private GLib.Menu window_section;
-				private Gtk.Menubar title_menu;
+				private Gtk.MenuBar title_menu;
 
         private static const GLib.ActionEntry[] entries =
         {
